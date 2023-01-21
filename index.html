@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <h1>Hello, world!</h1>
+    <div id="mostrador"></div>
+<button>1 minuto</button>
+
+
+
+<input type="button" value="PLAY" onclick="play()">
+<audio id="audio" src="/audios/alert.mp4"></audio>
+
+</body>
+<script src="js/timer.js"></script>
+<script>
+
+    function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+
+    var button = document.querySelector('button');
+var mostrador = document.querySelector('#mostrador');
+
+button.addEventListener('click', function() {
+    new Timer(2, mostrador, function() {
+        //alert('O tempo acabou!');
+        var audio = document.getElementById("audio");
+        audio.play();
+    }).start();
+});
+
+function training(durationInMin, exerciseDurationInSeg){
+
+}
+
+
+</script>
+</html>
